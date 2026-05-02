@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Premium</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="codeRain" aria-hidden="true"></canvas>
+<audio id="bgMusic" preload="auto" loop><source src="music1.mp3" type="audio/mpeg"></audio>
+<div class="bg" aria-hidden="true"><div class="blob" style="width:250px;height:250px;background:#ff7eb6;top:8%;left:8%"></div><div class="blob" style="width:320px;height:320px;background:#8fc7ff;top:56%;left:70%;animation-delay:2s"></div><div class="blob" style="width:180px;height:180px;background:#ffd166;top:28%;left:78%;animation-delay:4s"></div></div>
+<main class="main">
+<section class="page active" id="welcomePage"><div class="intro-card glass-pop"><div class="party-badge">🎁 Birthday Premium</div><h1>Birthday Surprise 🎉</h1><p>A premium digital gift filled with beautiful moments, warm wishes, and one last celebration waiting for you.</p><button class="btn" onpointerdown="prepareMusic()" onclick="startExperience()">Enter the Surprise ✨</button></div></section>
+<section class="page" id="heroPage"><div class="glass hero reveal"><div class="tag">Birthday Premium 💖</div><h1>Happy Birthday, My Beloved 🎂</h1><h2>For Someone Very Special</h2><div class="hero-grid"><div class="hero-text">This is more than a birthday page. It is a small space made for your memories, your smile, and the quiet hope that your life keeps becoming brighter and softer every day. ✨</div><div class="photo-wrap" onmousemove="tiltCard(event)" onmouseleave="resetTilt()"><img id="tiltPhoto" class="hero-photo" src="images/photo1.jpg" alt=""></div></div><div class="type-box"><span id="typewriter"></span><span class="cursor">|</span></div><div class="page-actions"><button class="mini-btn ghost" onclick="prevPage()">Back</button><button class="mini-btn" onclick="nextPage()">See Moments 🎈</button></div></div></section>
+<section class="page" id="timelinePage"><div class="glass section reveal timeline"><h3>Moments of Today 🌸</h3><div class="timeline-grid"><div class="timeline-item">🎁 A wish for your smile to stay bright.</div><div class="timeline-item">📸 Memories saved in one little place.</div><div class="timeline-item">💌 A special message hidden for you.</div></div><div class="page-actions"><button class="mini-btn ghost" onclick="prevPage()">Back</button><button class="mini-btn" onclick="nextPage()">View Memories 📷</button></div></div></section>
+<section class="page" id="galleryPage"><div class="glass section reveal gallery-sec"><h3>Beautiful Memories 📷</h3><div class="gallery"><img src="images/photo1.jpg" alt=""><img src="images/photo2.jpg" alt=""><img src="images/photo3.jpg" alt=""><img src="images/photo4.jpg" alt=""><img src="images/photo5.jpg" alt=""><img src="images/photo6.jpg" alt=""></div><div class="page-actions"><button class="mini-btn ghost" onclick="prevPage()">Back</button><button class="mini-btn" onclick="nextPage()">Open Letter 💌</button></div></div></section>
+<section class="page" id="letterPage"><div class="glass section reveal letter-sec"><h3>Open Your Letter 💌</h3><div style="text-align:center"><button class="mini-btn" onclick="openLetter()">Open Letter</button></div><div class="letter-paper" id="letterPaper">Happy birthday to someone truly precious. I hope life keeps giving you calm days, real happiness, and dreams that slowly come true one by one. Thank you for being part of this world. 💕</div><div class="page-actions"><button class="mini-btn ghost" onclick="prevPage()">Back</button><button class="mini-btn" onclick="nextPage()">Final Surprise 🎊</button></div></div></section>
+<section class="page" id="finalPage"><div class="glass section reveal final-sec"><h3>Final Surprise 🎊</h3><p>No matter how many birthdays pass, I will always wish for your peace, your success, and your happiest future.</p><button class="mini-btn" onclick="dropConfetti()">Celebrate Now 🎉</button><div class="page-actions"><button class="mini-btn ghost" onclick="prevPage()">Back</button><button class="mini-btn" onclick="replayStory()">Replay Story ✨</button></div></div></section>
+</main>
+<div class="photo-lightbox" id="photoLightbox" aria-hidden="true"><button class="lightbox-close" onclick="closeLightbox()">×</button><button class="lightbox-nav lightbox-prev" onclick="changeLightboxPhoto(-1)">‹</button><img id="lightboxImage" src="" alt=""><button class="lightbox-nav lightbox-next" onclick="changeLightboxPhoto(1)">›</button></div>
+<script src="script.js"></script>
+</body></html>
